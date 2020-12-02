@@ -1,4 +1,4 @@
-const cacheName = "portfolio-v1"
+const cacheName = "portfolio-v1.1"
 const files = [
   '/portifolio_web/',
   '/portifolio_web/index.html',
@@ -9,7 +9,8 @@ const files = [
   'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js',
   'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js'
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js',
+  'https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js'
 ]
 
 self.addEventListener('install', function(evt){
