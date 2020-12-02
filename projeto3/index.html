@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Portifólio da Vic</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- Fonte CSS-->
+  <link rel="stylesheet" href="css/heading.css">
+  <link rel="stylesheet" href="css/body.css">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
+    <div class="container"><a class="navbar-brand js-scroll-trigger" href="D:\Victoria\Desktop\portifolio_web\index.html">Portifólio da Vic &#9996;</a>
+    </div>
+  </nav>
+
+  <header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+      <h1 class="masthead-heading mb-0">Calculadora Simples </h1>
+
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-section portfolio" id="portfolio">
+    <div class="container">
+      <div class="text-center">
+
+        <script type="text/javascript">
+
+          function opcao() {
+            if (document.getElementById("operacao").value == "") {
+              alert("Por favor selecione uma opção");
+            }
+
+            if (document.getElementById("operacao").value == "1") {
+              if (valida()) {
+                soma();
+              }
+            }
+            if (document.getElementById("operacao").value == "2") {
+              if (valida()) {
+                subtrair();
+              }
+            }
+            if (document.getElementById("operacao").value == "3") {
+              if (valida()) {
+                dividir();
+              }
+            }
+            if (document.getElementById("operacao").value == "4") {
+              if (valida()) {
+                multiplicar();
+              }
+            }
+          }
+
+          function valida() {
+            if (document.getElementById("valorX").value == "" && document.getElementById("valorY").value == "") {
+              alert("Valor não informado");
+              return false;
+            } else {
+              if (validanumero()) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+
+          }
+
+          function validanumero() {
+            var valorX = document.getElementById("valorX").value;
+            var valorY = document.getElementById("valorY").value;
+            if (isNaN(valorX)) {
+              alert("Valor do primeiro campo inválido");
+              return false;
+            }
+            if (isNaN(valorY)) {
+              alert("Valor do segundo campo inválido");
+              return false;
+            } else {
+              return true;
+            }
+
+          }
+
+          function soma() {
+            var valorX = document.getElementById("valorX").value;
+            var valorY = document.getElementById("valorY").value;
+            var resultado = parseInt(valorX) + parseInt(valorY);
+            document.getElementById("resultado").value = resultado;
+
+          }
+
+          function subtrair() {
+            var valorX = document.getElementById("valorX").value;
+            var valorY = document.getElementById("valorY").value;
+            var resultado = parseInt(valorX) - parseInt(valorY);
+            document.getElementById("resultado").value = resultado;
+
+          }
+
+          function dividir() {
+            var valorX = document.getElementById("valorX").value;
+            var valorY = document.getElementById("valorY").value;
+            var resultado = parseInt(valorX) / parseInt(valorY);
+            document.getElementById("resultado").value = resultado;
+
+          }
+
+          function multiplicar() {
+            var valorX = document.getElementById("valorX").value;
+            var valorY = document.getElementById("valorY").value;
+            var resultado = parseInt(valorX) * parseInt(valorY);
+            document.getElementById("resultado").value = resultado;
+
+          }
+        </script>
+
+        </head>
+
+        <body>
+
+            <form id="form">
+              <input id="valorX" type="text"/>
+              <select id="operacao" onblur="opcao()">
+                <option id="valor" value="">escolha uma opção</option>
+                <option id="valor" value="1">Somar</option>
+                <option id="valor" value="2">Subtrair</option>
+                <option id="valor" value="3">Dividir</option>
+                <option id="valor" value="4">Multiplicar</option>
+              </select>
+              <input id="valorY" type="text" size="15" onblur="opcao()" />
+              <b>=</b>
+              <input id="resultado" type="text" disabled="true" />
+              <input id="calcular" type="button" value="Calcular" onclick="opcao()" />
+              <input id="limpar" type="reset" value="Resetar" />
+            </form>
+          </div>
+      </div>
+  </section>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="mb-4">ONDE EU ESTOU?</h4>
+          <p class="pre-wrap lead mb-0">Ponta Porã-MS</p>
+        </div>
+
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h4 class="mb-4">ONDE ME ACHAR DA WEB?</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/StartBootstrap"><i class="fab fa-fw fa-facebook-f"></i></a><a class="btn btn-outline-light btn-social mx-1"
+            href="https://www.twitter.com/sbootstrap"><i class="fab fa-fw fa-twitter"></i></a><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/startbootstrap"><i class="fab fa-fw fa-linkedin-in"></i></a><a
+            class="btn btn-outline-light btn-social mx-1" href="https://www.dribble.com/startbootstrap"><i class="fab fa-fw fa-dribbble"></i></a>
+        </div>
+
+        <div class="col-lg-4">
+          <h4 class="mb-4">ESSE QUADRADO</h4>
+          <p class="pre-wrap lead mb-0">Coloquei pra ficar simétrico porque tava me dando TOC</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
