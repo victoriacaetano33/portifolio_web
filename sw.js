@@ -1,4 +1,4 @@
-const cacheName = "portfolio-v1.1"
+const cacheName = "portfolio-v1.2"
 const files = [
   '/portifolio_web/',
   '/portifolio_web/index.html',
